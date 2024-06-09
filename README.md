@@ -36,28 +36,28 @@ Additional features:
 
 ### In-Detail
 
-**Performance**
+#### Performance
 The repository utilizes the @sveltejs/enhanced-img plugin, which boosts performance by optimizing image sizes and formats, reducing layout shifts, and decreasing loading times. We also implement lazy loading, delaying the loading of non-critical resources such as images or videos until they are needed, significantly accelerating the initial page load time. Additionally, the project uses local fonts, eliminating the need to download fonts from the web, thereby reducing webpage loading times and preventing display delays.
 
-**SEO**
+#### SEO
 The repository features a working Sitemap.xml, which is due to Netlify's handling of server-side JavaScript in the static folder. For now, the Sitemap.xml <url> tags need to be added manually. The current Robots.txt configuration allows all crawlers to index all pages. Inside the app.html, we have added title, description, and all relevant meta and Open Graph tags.
 
-**Netlify**
+#### Netlify
 This repository can be directly uploaded and hosted by Netlify. We added the correctly working netlify.toml configuration and the Netlify adapter. All pages are prerendered to be hosted as static sites on Netlify. We also added the _redirects configuration, which redirects users in the event of a 404 status to the custom 404 page.
 
-**Tailwind**
+#### Tailwind
 Tailwind CSS is fully configured through the tailwind.config.js file in our Svelte template. We have also introduced a custom primary color setting that allows for the modification of the entire page's appearance.
 
-**Customizable**
+#### Customizable
 We added custom error pages and a completley customized Header and Footer.
 
-**Responsivess**
+#### Responsivess
 The repository utilizes responsive Tailwind CSS classes to ensure that all pages display correctly across various devices, maintaining the appropriate format and size. We have also included custom favicons in all the necessary sizes for platforms like Chrome and iOS, ensuring that shortcuts and app icons are displayed accurately.
 
-**Contact Form**
+#### Contact Form
 We have integrated a fully customized contact form that is seamlessly recognized by Netlify's form detection system. To activate form detection on your Netlify site, navigate to the "Forms" tab. Within this section, you can set up the form so that submissions are forwarded to an email address or other specified channels. Following a successful submission, our setup displays a custom success page, which automatically redirects to the home page after five seconds.
 
-**Additonal Features**
+#### Additonal Features
 We've incorporated a load function capable of passing slugs via the route: /page/[slug]. Additionally, we have implemented a local variable that tracks the total number of visits to the route page. This count is stored on the user's device and can be accessed through a Svelte writable store.
 
 
