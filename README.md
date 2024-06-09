@@ -1,5 +1,5 @@
 # Svelte-Netlify-Demo
-🚀 Welcome to the perfect repository for your Svelte & Netlify projects! This repository is the perfect starting-off point, equipped with a fully functional Netlify contact form, a [PageSpeed] (https://pagespeed.web.dev/analysis/https-svelte-netlify-demo-netlify-app/o8xryfd6zs?form_factor=desktop) score of 100 in Performance/SEO, standard header-footer layout, extensive customization options, and advanced features for both Svelte and Netlify. Have fun building your project! 🎉
+🚀 Welcome to the perfect repository for your Svelte & Netlify projects! This repository is the perfect starting-off point, equipped with a fully functional Netlify contact form, a [PageSpeed](https://pagespeed.web.dev/analysis/https-svelte-netlify-demo-netlify-app/o8xryfd6zs?form_factor=desktop) score of 100 in Performance/SEO, standard header-footer layout, extensive customization options, and advanced features for both Svelte and Netlify. Have fun building your project! 🎉
 
 ## Table of Contents
 1. [Features](#features)
@@ -89,16 +89,16 @@ tailwindcss / postcss / autoprefixer / adapter-netlify / enhanced-img
 
 ## 🏙️ Screenshots
 The PageSpeed result:
-https://github.com/mokollmar/svelte-netlify-demo/blob/main/screenshots/s1
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s1.png)
 
 The Root Page:
-https://github.com/mokollmar/svelte-netlify-demo/blob/main/screenshots/s2
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s2.png)
 
 The Netlify Contact Form:
-https://github.com/mokollmar/svelte-netlify-demo/blob/main/screenshots/s3
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s3.png)
 
 Netlify active Forms and Notification Config:
-https://github.com/mokollmar/svelte-netlify-demo/blob/main/screenshots/s3
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s4.png)
 
 
 
