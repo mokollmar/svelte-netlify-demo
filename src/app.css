@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HTML file: */
+html {
+    scroll-behavior: smooth;
+}
+
+/* All files: */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+@font-face {
+    font-weight: normal;
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('/font/Poppins/Poppins-SemiBold.ttf');
+    font-weight: normal;
+    font-display: swap;
+} 
