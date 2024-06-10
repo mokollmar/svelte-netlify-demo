@@ -4,12 +4,12 @@
 ## Table of Contents
 1. [Features](#features)
     - [In-Short](#in-short)
+    - [Screenshots](#screenshots)
     - [In-Detail](#in-detail)
 2. [Installation](#installation)
 3. [Packages](#packages)
-4. [Screenshots](#screenshots)
+4. [Demo](#demo)
 5. [Contributing](#contributing)
-6. [Demo](#demo)
 
 
 
@@ -32,6 +32,20 @@ Additional features:
 - [x] Slug passing from the laod function
 - [x] device-specific Favicons / all Meta Tags
 - [x] local variables and store writables
+
+
+### Screenshots
+The PageSpeed result:
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s1.png)
+
+The Root Page:
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s2.png)
+
+The Netlify Contact Form:
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s3.png)
+
+Netlify active Forms and Notification Config:
+![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s4.png)
 
 
 ### In-Detail
@@ -85,20 +99,6 @@ If you're curious, this repository utilizes the following non-default packages:
 ```
 tailwindcss / postcss / autoprefixer / adapter-netlify / enhanced-img
 ```
-
-
-## 🏙️ Screenshots
-The PageSpeed result:
-![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s1.png)
-
-The Root Page:
-![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s2.png)
-
-The Netlify Contact Form:
-![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s3.png)
-
-Netlify active Forms and Notification Config:
-![Screenshot 1](https://github.com/mokollmar/svelte-netlify-demo/blob/main/Screenshots/s4.png)
 
 
 
