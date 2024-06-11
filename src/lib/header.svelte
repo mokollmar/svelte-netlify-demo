@@ -67,12 +67,7 @@
       </div>
       <div class="flex flex-col justify-evenly text-white w-full sm:hidden">
         {#each navigations as nav}
-          <a
-            href={nav.link}
-            class={current_link === nav.link
-              ? "border-y-4 rounded-full  2xl:px-12 border-primary"
-              : "border-y-4 border-primary hover:border-primary border-opacity-10 rounded-full 2xl:px-12 "}
-          >
+          <a href={nav.link}>
             <p class="text-5xl sm:text-2xl py-1">{nav.title}</p>
           </a>
         {/each}
