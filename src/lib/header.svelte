@@ -1,77 +1,60 @@
 <script>
   import { onMount } from "svelte";
   import { page } from "$app/stores";
-  import { fade } from "svelte/transition";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   import { beforeNavigate } from "$app/navigation";
+  import Navigations from "$lib/navigations.svelte";
+  import PoweredBy from "$lib/powered_by.svelte";
+
+  export let mobileNav = false;
+  export let yScroll = 0;
 
   let mounted = false;
   onMount(() => (mounted = true));
 
+  // get current link:
   let current_link = "";
   $: if (mounted) current_link = $page.url.pathname;
 
-  const navigations = [
-    { title: "Home", link: "/" },
-    { title: "Contact", link: "/contact" },
-  ];
-
-  let mobileNav = false;
-
-  const resetMobileNav = () => {
-    mobileNav = false;
-  };
-
-  beforeNavigate(resetMobileNav);
+  // Cancel on navigation:
+  beforeNavigate(() => (mobileNav = false));
 </script>
 
-<div
-  class="flex justify-end sm:justify-center border-b-2 border-opacity-25 border-primary text-primary py-5"
+<header
+  class={"sticky z-[10] top-0 px-6 flex items-center py-5 transition-all duration-500 border-opacity-25 border-primary border-b-4 justify-end sm:justify-between" +
+    (yScroll > 0 ? " bg-white  bg-opacity-90" : " bg-white")}
 >
-  <div class="hidden sm:flex flex-row justify-evenly w-full sm:w-1/2">
-    {#each navigations as nav}
-      <a
-        href={nav.link}
-        class={current_link === nav.link
-          ? "border-y-4 rounded-full px-6 2xl:px-12 border-primary"
-          : "border-y-4 border-primary hover:border-primary border-opacity-10 rounded-full px-6 2xl:px-12 "}
-      >
-        <p class="text-xl sm:text-2xl py-1">{nav.title}</p>
-      </a>
-    {/each}
+  <Navigations {current_link} />
+
+  <div class="px-10 sm:hidden">
+    <button on:click={() => (mobileNav = !mobileNav)}>
+      <i
+        class={!mobileNav
+          ? "fa-solid fa-bars-staggered text-primary text-3xl"
+          : "fa-solid fa-bars-staggered text-white text-3xl"}
+      ></i>
+    </button>
   </div>
-  <div class="pr-10 sm:hidden">
-    {#if !mobileNav}
-      <button on:click={() => (mobileNav = !mobileNav)}
-        ><iconify-icon class="text-5xl" icon="ci:hamburger"
-        ></iconify-icon></button
-      >
-    {/if}
-  </div>
-</div>
+</header>
+
+<!-- Mobile Navigation Bar: -->
 
 {#if mobileNav}
   <div
-    class="h-screen w-full sm:hidden bg-primary px-10 z-50 fixed bg-opacity-90"
-    transition:fade={{ duration: 200 }}
+    class="h-screen w-5/6 sm:hidden bg-white px-10 py-5 z-50 border-2 border-primary fixed right-0 rounded-l-lg flex flex-col space-y-10"
+    transition:slide={{ duration: 300, easing: quintOut, axis: "x" }}
   >
-    <div
-      class="flex flex-col justify-end sm:justify-center border-b-2 border-opacity-25 border-primary text-primary py-5"
-    >
-      <div class="flex justify-end mb-10">
-        <button on:click={() => (mobileNav = !mobileNav)}
-          ><iconify-icon
-            class="text-5xl text-white"
-            icon="material-symbols:cancel-rounded"
-          ></iconify-icon></button
-        >
-      </div>
-      <div class="flex flex-col justify-evenly text-white w-full sm:hidden">
-        {#each navigations as nav}
-          <a href={nav.link}>
-            <p class="text-5xl sm:text-2xl py-1">{nav.title}</p>
-          </a>
-        {/each}
-      </div>
+    <div class="flex justify-end">
+      <button on:click={() => (mobileNav = !mobileNav)}
+        ><i class="fa-solid fa-circle-xmark text-primary text-3xl"></i></button
+      >
     </div>
+
+    <div class="flex-grow flex flex-col">
+      <Navigations {current_link} isMobileNav={true} />
+    </div>
+
+    <PoweredBy />
   </div>
 {/if}

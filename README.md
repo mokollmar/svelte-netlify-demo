@@ -23,6 +23,7 @@
 - [x] 🎨 **Customizable** custom error pages and custom reusable colors
 - [x] 📱 **Responsivess** looks beautiful on all Viewports
 - [x] 💬 **Contact Form** fully working Netlify contact form
+- [x] 🥳 **FontAwesome Integration** fully working FontAwesome integration
 
 Additional features:
 - [x] custom Netlify 404 Page with _redirects
@@ -97,7 +98,7 @@ To set up this Svelte-Netlify-Demo and use it as a template, follow these steps:
 ## 📦 Packages
 If you're curious, this repository utilizes the following non-default packages:
 ```
-tailwindcss / postcss / autoprefixer / adapter-netlify / enhanced-img
+tailwindcss / postcss / autoprefixer / adapter-netlify / enhanced-img / fontawesome-free
 ```
 
 
