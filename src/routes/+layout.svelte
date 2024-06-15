@@ -1,8 +1,8 @@
 <script>
   import "../app.css";
   import "@fortawesome/fontawesome-free/css/all.min.css";
-  import Footer from "$lib/footer.svelte";
-  import Header from "$lib/header.svelte";
+  import Footer from "$lib/footer/footer.svelte";
+  import Header from "$lib/header/header.svelte";
 
   let isMobileNav = false;
   let yScroll = 0;

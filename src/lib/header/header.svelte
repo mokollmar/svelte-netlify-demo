@@ -4,8 +4,8 @@
   import { slide } from "svelte/transition";
   import { quintOut } from "svelte/easing";
   import { beforeNavigate } from "$app/navigation";
-  import Navigations from "$lib/navigations.svelte";
-  import PoweredBy from "$lib/powered_by.svelte";
+  import Navigations from "$lib/header/navigations.svelte";
+  import PoweredBy from "$lib/footer/powered_by.svelte";
 
   export let mobileNav = false;
   export let yScroll = 0;

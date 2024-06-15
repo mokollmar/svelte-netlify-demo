@@ -1,5 +1,5 @@
 <script>
-    import PoweredBy from "$lib/powered_by.svelte";
+    import PoweredBy from "$lib/footer/powered_by.svelte";
 </script>
 
 <div
