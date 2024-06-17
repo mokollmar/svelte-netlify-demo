@@ -1,5 +1,5 @@
 <script>
-    import LazyLoad from "$lib/LazyLoad.svelte";
+    import LazyLoad from "$lib/components/LazyLoad.svelte";
 
     let email = "";
     let message = "";

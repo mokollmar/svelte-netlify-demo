@@ -1,5 +1,5 @@
 <script>
-    import LazyLoad from "$lib/LazyLoad.svelte";
+    import LazyLoad from "$lib/components/LazyLoad.svelte";
     import watermelon_image from "../images/watermelon.png?enhanced";
     import { onMount } from "svelte";
     import { did_update } from "../store";
