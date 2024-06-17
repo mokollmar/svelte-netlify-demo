@@ -2,18 +2,15 @@
     import LazyLoad from "$lib/LazyLoad.svelte";
     import watermelon_image from "../images/watermelon.png?enhanced";
     import { onMount } from "svelte";
-    import { page_views } from "../store";
+    import { did_update } from "../store";
 
+    let page_views = 0;
     onMount(() => {
-        const storedValue = localStorage.getItem("page_views");
-        if (storedValue) {
-            console.log("Stored value: ", storedValue);
-            page_views.set(storedValue);
+        page_views = parseInt(localStorage.getItem("page_views") || 0) + 1;
+        if (!$did_update) {
+            localStorage.setItem("page_views", page_views);
+            did_update.update((value) => !value);
         }
-
-        page_views.subscribe((value) => {
-            localStorage.setItem("page_views", ++value); // add page_views by one
-        });
     });
 </script>
 
@@ -22,25 +19,27 @@
 >
     <LazyLoad>
         <h1
-            class="text-center font-bold text-2xl sm:text-3xl xl:text-5xl px-5 md:px-12 xl:px-24 text-primary py-5"
+            class="text-center font-bold text-2xl sm:text-3xl xl:text-5xl px-5 md:px-12 xl:px-24 text-primary"
         >
-            {$page_views < 1
+            {page_views === 1
                 ? "Welcome to the Svelte Netlify Demo"
                 : "Welcome back!"}
         </h1>
 
-        <div class="flex justify-center items-center px-5 sm:px-12">
+        <div
+            class="flex justify-center items-center px-5 sm:px-12 bg-slate-300 my-10"
+        >
             <enhanced:img
                 src={watermelon_image}
                 alt="watermelon"
-                class="h-[50vh] object-contain"
+                class="h-[40vh] object-contain"
             />
         </div>
-        {#if $page_views > 1}
+        {#if page_views > 1}
             <h2
-                class="text-primary px-5 sm:px-12 text-md py-5 flex items-center text-center justify-center"
+                class="text-primary px-5 sm:px-12 text-md flex items-center text-center justify-center"
             >
-                You have visited this site {$page_views} times
+                You have visited this site {page_views} times
             </h2>
         {/if}
     </LazyLoad>
