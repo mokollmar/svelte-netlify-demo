@@ -27,7 +27,7 @@
         </h1>
 
         <div
-            class="flex justify-center items-center px-5 sm:px-12 bg-slate-300 my-10"
+            class="flex justify-center items-center px-5 sm:px-12  my-10"
         >
             <enhanced:img
                 src={watermelon_image}
