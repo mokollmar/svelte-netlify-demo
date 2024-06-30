@@ -73,7 +73,7 @@ The repository utilizes responsive Tailwind CSS classes to ensure that all pages
 We have integrated a fully customized contact form that is seamlessly recognized by Netlify's form detection system. To activate form detection on your Netlify site, navigate to the "Forms" tab. Within this section, you can set up the form so that submissions are forwarded to an email address or other specified channels. Following a successful submission, our setup displays a custom success page, which automatically redirects to the home page after five seconds.
 
 #### Additonal Features
-We've incorporated a load function capable of passing slugs via the route: /page/[slug]. Additionally, we have implemented a local variable that tracks the total number of visits to the route page. This count is stored on the user's device and can be accessed through a Svelte writable store.
+We've incorporated a load function capable of passing slugs via the route: /page/[slug]. Additionally, we have implemented a local variable that tracks the total number of visits across all pages. This count is stored on the user's device and can be accessed through a Svelte writable store.
 
 
 
